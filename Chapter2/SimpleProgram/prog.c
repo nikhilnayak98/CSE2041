@@ -16,5 +16,5 @@ int main()
 	scanf("%lf", &num1);
 	printf("\nCharacter - %c", b);
 	printf("\nInteger - %d", num);
-	printf("\Float Number - %f", num1);
+	printf("\nFloat Number - %f", num1);
 }
