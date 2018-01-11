@@ -27,7 +27,7 @@ int main()
 
 double payment_cal(double principle, double annual_interest, int total_payments)
 {
-	double payment = (((double)annual_interest/1200)*principle)/(1 - pow((1 + annual_interest/1200), -1*total_payments));
+	double payment = (((double)annual_interest*100/12)*principle)/(1 - pow((1 + annual_interest), -1*total_payments));
 	return payment; 
 }
 
