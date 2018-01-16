@@ -14,35 +14,41 @@ void main()
 	printf("\n Enter year - ");
 	scanf("%d", &year);
 	
-	switch(month)
+	if(month > 11)
+		days += 31;
+	if(month > 10)
+		days += 30;
+	if(month > 9)
+		days += 31;
+	if(month > 8)
+		days += 31;
+	if(month > 7)
+		days += 30;
+	if(month > 6)
+		days += 31;
+	if(month > 5)
+		days += 30;
+	if(month > 4)
+		days += 31;
+	if(month > 3)
+		days += 30;
+	if(month > 2)
 	{
-		case 2: days += 30;
-		case 3: days += 31;
-		case 4: days += 30;
-		case 5: days += 31;
-		case 6: days += 30;
-		case 7: days += 31;
-		case 8: days += 31;
-		case 9: days += 30;
-		case 10: days += 31;
-		case 11: days += 30;
-		case 12: days += 31;
-		default: break;
+		if(leap(year) == 1)
+			days += 29;
+		else
+			days += 28;
 	}
-	
-	if(leap(year) == 1)
-	{
+	if(month > 1)
+		days += 31;
 		
-	}
-	else
-	{
-		
-	}
+	days += day;
+	printf("\n Day Number - %d\n", days);
 }
 
 int leap(int year)
 {
-	if((year % 4 == 00) || ((year % 100 == 0) && (year % 400 == 0)))
+	if(((year % 4 == 0) && (year % 100 !=0)) || ((year % 100 == 0) && (year % 400 == 0)))
 		return 1;
 	return 0;
 }
