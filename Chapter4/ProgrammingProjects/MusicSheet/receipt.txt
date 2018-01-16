@@ -1,0 +1,9 @@
+
+1. Teacher
+2. Non-teacher
+Select a choice
+Total purchases - $
+
+Total purchases 		 $24.90
+Sales tax (5%) 		 $1.25
+Total 		 $26.14
