@@ -25,11 +25,10 @@ void main()
 		discounted_total = total_purchases - discount_price;
 		tax = discounted_total * SALES_TAX;
 		total = discounted_total + tax;
-		printf("\nTotal purchases \t $%.2f", total_purchases);
-		printf("\nTeacher's discount (%d%%) \t\t $%.2f", (int)(discount * 100), discount_price);
-		printf("\nDiscounted total \t\t $%.2f", discounted_total);
-		printf("\nSales tax (%d%%) \t\t $%.2f", (int)(SALES_TAX * 100), tax);
-		printf("\nTotal \t\t $%.2f\n", total);
+		printf("\nTotal purchases %5c $%.2f", ' ', total_purchases);
+		printf("\nTeacher's discount (%d%%) %5c $%.2f", (int)(discount * 100), ' ', discount_price);
+		printf("\nDiscounted total %5c $%.2f", ' ', discounted_total);
+		printf("\nTotal %5c $%.2f\n", ' ', total);
 	}
 	else if(choice == 2)
 	{

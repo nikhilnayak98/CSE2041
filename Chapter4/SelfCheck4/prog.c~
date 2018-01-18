@@ -1,0 +1,15 @@
+#include "stdio.h"
+void main()
+{
+	int n, total, average;
+	printf("\nEnter n - ");
+	scanf("%d", &n);
+	printf("\nEnter total sum - ");
+	scanf("%d", &total);
+	if(n > 0)
+	{
+		average = total / n;
+	}
+	else
+		printf("\nn should be greater than 0";)
+}

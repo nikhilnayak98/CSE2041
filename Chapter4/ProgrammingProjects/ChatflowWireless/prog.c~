@@ -43,5 +43,5 @@ void generate_bill(double weekday_mins,double night_mins,double weekend_mins)
     printf("\n Week End Minutes - %.0f mins", weekend_mins);
     printf("\n Bill Without Tax - %.0f ", cost_no_tax);
     printf("\n Average cost of a minute - %.0f ", avg);
-    printf("\n Bill With Tax (%.2f%%) - %.0f\n", (TAX * 100), cost_tax);
+    printf("\n Bill With Tax (%.0f%%) - %f\n", (TAX * 100), cost_tax);
 }
