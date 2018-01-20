@@ -15,7 +15,7 @@ void main()
 	
 	printf("\nPassengers %3c Weekly Commute (km) %3c Gasoline Consumption(L) %3c Efficiency (pass km/L) %3c Weekly Subsidy($)", ' ', ' ', ' ', ' ');
 	
-	while((input_status = scanf("%d%lf%lf", &passengers, &distance, &gasoline)) == -1)
+	while((input_status = scanf("%d%lf%lf", &passengers, &distance, &gasoline)) != EOF)
 	{
 		scanf("%d", &passengers);
 		scanf("%lf", &distance);
@@ -23,7 +23,6 @@ void main()
 		efficiency = (passengers * distance) / gasoline;
 		subs = passengers * distance * SUBS;
 		print_chart(passengers, efficiency, gasoline, distance, subs);
-		//printf("\n %d %f %f %f %f", passengers, distance, gasoline, efficiency, subs);
 	}
 	
 }
