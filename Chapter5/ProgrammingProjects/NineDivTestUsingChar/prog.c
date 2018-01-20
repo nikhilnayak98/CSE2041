@@ -12,23 +12,23 @@ void main()
 	scanf("%d", &n);
 	
 	divisibility(n);
-	//divisibility(154368);
-	//divisibility(621594);
-	//divisibility(123456);
+	divisibility(154368);
+	divisibility(621594);
+	divisibility(123456);
 }
 
 void divisibility(int n)
 {
-	char digit, dig;
+	char digit;
 	int r, sum = 0;
 	printf("\n");
 	while(n != 0)
 	{
 		r = n % 10;
 		n = n / 10;
-		dig = (char)((int)r - (int)'0');
-		printf("%c ", digit);
-		sum += (int)digit - (int)'0';
+		digit = (char)r;
+		printf("%d", ((int)digit - (int)'0'));
+		sum += digit;
 	}
-	printf("%d\n", sum);
+	printf("\n%d\n", sum);
 }
