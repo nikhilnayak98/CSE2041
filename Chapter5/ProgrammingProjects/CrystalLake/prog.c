@@ -1,7 +1,7 @@
 /*
 Name - Nikhil Ranjan Nayak
 Regd no - 1641012040
-Desc - Use of Manning’s equation.
+Desc - Use of Manning’s equation for Crystal Lake problem.
 */
 #include "stdio.h"
 #include "math.h"
