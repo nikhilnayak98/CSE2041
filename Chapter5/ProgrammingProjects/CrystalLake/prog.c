@@ -53,7 +53,7 @@ double cal_flow(double depth)
 
 int within_desired(double num)
 {
-	if(num >= ((FLOW - ((10/100) * FLOW))) && (num <= (FLOW + ((10/100) * FLOW))))
+	if(num >= ((FLOW - ((0.1/100) * FLOW))) && (num <= (FLOW + ((0.1/100) * FLOW))))
 		return 1;
 	return 0;
 }
