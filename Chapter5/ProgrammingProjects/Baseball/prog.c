@@ -4,23 +4,39 @@ Regd no - 1641012040
 Desc - Baseball Player Average.
 */
 #include "stdio.h"
-void print();
 void main()
 {
-	int flag, player;
-	char c = 'T';
-	while((flag == scanf("%d", &player) != EOF))
+	int player;
+	char c = ' ';
+	while(scanf("%d", &player) != EOF)
 	{
-		while(c != '\0')
+		int hits = 0, bats = 0;
+		
+		printf("\n\nPlayer %d's record: ", player);
+		
+		scanf("%c", &c);
+		if(c != '\n')
 		{
-			scanf("%c", &c);
-			printf("%c", c);
+			if((c == 'O') || (c == 'H'))
+				bats++;
+				
+			if(c == 'H')
+				hits++;
+			
+			while(c != '\n')
+			{
+				if((c == 'O') || (c == 'H'))
+					bats++;
+			
+				scanf("%c", &c);
+				
+				if(c == 'H')
+					hits++;
+				
+				printf("%c", c);
+			}
 		}
+		printf("Player %d's batting average: %.3f", player, ((double)hits / bats));
 	}
-}
-
-void print()
-{
-	//printf("\nPlayer %d's record:");
-	//printf("\nPlayer %d's batting average: ");
+	printf("\n");
 }
