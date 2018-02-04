@@ -19,13 +19,14 @@ void main()
 
 int isprime(int n)
 {
-	int i, ctr = 0;
-	for(i = 1; i <= sqrt(n); i++)
+	int i, flag = 1;
+	for(i = 2; i <= sqrt(n); i++)
 	{
 		if(n % i == 0)
-			ctr++;
+		{
+			flag = 0;
+			break;
+		}
 	}
-	if(ctr == 1)
-		return 1;
-	return 0;
+	return flag;
 }
