@@ -46,11 +46,10 @@ void main()
 
 void approximate_square_root(double N, double LG, double *NG)
 {
-	double d;
-	do
+	*NG = 0.5 * (LG + (N / LG));
+	while(fabs(*NG - LG) > DIFFERENCE)
 	{
+		LG = *NG;
 	    *NG = 0.5 * (LG + (N / LG));
-	    d = fabs(*NG - LG);
-	    LG = *NG;
-	}while(d > DIFFERENCE);
+	}
 }
