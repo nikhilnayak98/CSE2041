@@ -50,6 +50,6 @@ void approximate_square_root(double N, double LG, double *NG)
 	while(fabs(*NG - LG) > DIFFERENCE)
 	{
 		LG = *NG;
-	    *NG = 0.5 * (LG + (N / LG));
+		*NG = 0.5 * (LG + (N / LG));
 	}
 }
