@@ -12,7 +12,6 @@ enum state transition(enum state, char);
 
 void main()
 {
-
     enum state current_state = start;
     char transition_char = ' ';
 
