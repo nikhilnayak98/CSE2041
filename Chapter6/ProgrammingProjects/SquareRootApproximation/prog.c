@@ -6,45 +6,45 @@
 #include <stdio.h>
 #include <math.h>
 #define DIFFERENCE 0.005
-void square_root(double, double, double*);
+void approximate_square_root(double, double, double*);
 void main()
 {
 	double n, LG = 0.1, NG;
 	
 	n = 4;
 	printf("\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	n = 120.5;
 	printf("\n\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	n = 88;
 	printf("\n\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	n = 36.01;
 	printf("\n\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	n = 10000;
 	printf("\n\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	n = 0.25;
 	printf("\n\nNumber %lf - ", n);
-	square_root(n, LG, &NG);
+	approximate_square_root(n, LG, &NG);
 	printf("\nSquare root - %lf", NG);
 	
 	printf("\n");
 }
 
-void square_root(double N, double LG, double *NG)
+void approximate_square_root(double N, double LG, double *NG)
 {
 	double d;
 	do
