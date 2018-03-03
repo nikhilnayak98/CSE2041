@@ -44,7 +44,7 @@ void do_next_op(char operator_symbol, double operand, double *accumulator)
         if(operand != 0)
             *accumulator /= operand;
         else
-            printf("divide by zero not error\n");
+            printf("divide by zero error\n");
     }
     else if(operator_symbol == '^')
         *accumulator = pow(*accumulator, operand);
