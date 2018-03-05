@@ -7,14 +7,14 @@
 #include <math.h>
 #define FLAT_RATE 7.99
 #define ADD_RATE 1.99
-void chargers(double, double*, double*);
+void charges(double, double*, double*);
 double round_money(double);
 void main()
 {
 	FILE *input = fopen("usage.txt", "r"), *output = fopen("charges.txt", "w");
 	
 	int month, year, customer_id, n;
-	double hours, charges, average;
+	double hours, charge, average;
 	
 	fscanf(input, "%d %d", &month, &year);
 	
@@ -25,15 +25,15 @@ void main()
 	{
 		fscanf(input, "%lf", &hours);
 		fprintf(output, "%d %9c %.1f", customer_id, ' ', hours);
-		chargers(hours, &charges, &average);
-		fprintf(output, "%13c %.2f %15c %.2f \n", ' ', charges, ' ', average);
+		charges(hours, &charge, &average);
+		fprintf(output, "%13c %.2f %15c %.2f \n", ' ', charge, ' ', average);
 	}
 	
 	fclose(input);
 	fclose(output);
 }
 
-void chargers(double hours, double *charge, double *average)
+void charges(double hours, double *charge, double *average)
 {
 	if(hours <= 10)
 		*charge = FLAT_RATE;
