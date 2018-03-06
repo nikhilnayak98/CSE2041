@@ -4,28 +4,40 @@
 *Desc -	Checksum
 */
 #include <stdio.h>
+#include <stdlib.h>
 void get_checksum(int, int*);
+void operate(char ch);
 void main()
+{	
+	char ch;
+	scanf(" %c", &ch);
+	operate(ch);
+}
+
+void operate(char ch)
 {
 	int sum, checksum;
-	char ch;
 	
-	sum = 0;
-	scanf("%c", &ch);
+	sum = (int)'.';
+	sum += (int)ch;
+	
+	scanf(" %c", &ch);
 	while(ch != '.')
 	{
 		sum += ((int)ch);
 		scanf(" %c", &ch);
 	}
+
 	get_checksum(sum, &checksum);
+	printf("checksum - %c (%d)\n", (char)checksum, checksum);
 	
-	printf("%c", (char)checksum);
-	printf("\n");
+	scanf(" %c", &ch);
+	if(ch != '.')
+		operate(ch);
 }
 
 void get_checksum(int sum, int *checksum)
 {
-	char space = ' ';
 	sum %= 64;
-	*checksum = sum + (int)space; 
+	*checksum = sum + (int)' ';
 }
