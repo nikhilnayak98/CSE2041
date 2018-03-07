@@ -4,7 +4,6 @@
 *Desc -	Checksum
 */
 #include <stdio.h>
-#include <stdlib.h>
 void get_checksum(int, int*);
 void operate(char ch);
 void main()
