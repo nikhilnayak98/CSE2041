@@ -71,14 +71,14 @@ void fgetAnswers(char answers[], int n, FILE *input)
 		fprintf(output, "%d\n", (correct * 100) / n);
 	}
 
-	fprintf(output,"\nQuestion %2c", ' ');
+	fprintf(output, "\nQuestion %2c", ' ');
 	
 	for(i = 0; i < n ; i++)
 	{
 		fprintf(output, "%d ", i);
 	}
 
-	fprintf(output,"\nMissed by %2c", ' ');
+	fprintf(output, "\nMissed by %2c", ' ');
 
 	for(i = 0; i < n ; i++)
 	{
