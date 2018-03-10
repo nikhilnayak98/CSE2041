@@ -1,0 +1,11 @@
+           Exam Report   
+Question   0 1 2 3 4 
+Answer    d b b a c 
+
+ID    Score(%)
+111   80
+102   60
+251   100
+
+Question   0 1 2 3 4 
+Missed by   0 2 0 1 0 
