@@ -1,7 +1,7 @@
 /*
 Name - Nikhil Ranjan Nayak
 Regd No - 1641012040
-Desc - Multiple Choice Exam
+Desc - Polygon area.
 */
 #include <stdio.h>
 #include <math.h>
