@@ -21,6 +21,8 @@ void main()
 	}
 	
 	fgetAnswers(answers, n, input);
+	
+	fclose(input);
 }
 
 
@@ -84,4 +86,6 @@ void fgetAnswers(char answers[], int n, FILE *input)
 	{
 		fprintf(output, "%d ", missed[i]);
 	}
+	
+	fclose(output);
 }
