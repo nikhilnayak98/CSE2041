@@ -5,12 +5,10 @@ Desc: Set of letters
 */
 #include <stdio.h>
 #include <string.h>
-
 int is_empty(const char *);
 char *two_ele_subs(char *, int, int);
 void print_with_commas(const char *);
 void print_set(const char *);
-
 void main()
 {
     int c_count1 = 0, c_count2 = 1;
