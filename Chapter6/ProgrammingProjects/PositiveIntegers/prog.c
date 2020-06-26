@@ -18,7 +18,7 @@ void main()
 	printf("\n\nEnter a number ");
 	scanf("%d", &num);
 	
-	check(num, &q1, &q1, &q3);
+	check(num, &q1, &q2, &q3);
 	
 	if(q1 == 1)
 		printf("\nYes");
@@ -30,7 +30,7 @@ void main()
 	else
 		printf("\nEven");
 	
-	if(q2 == 1)
+	if(q3 == 1)
 		printf("\nYes\n");
 	else
 		printf("\nNo\n");
@@ -50,21 +50,23 @@ void check(int num, int *q1, int *q2, int *q3)
 
 int digits_odd(int num)
 {
-	int dig = 0;
+    	int temp;
+	int total = 0;
 	if(num == 0)
-		dig = 1;
+		total = 0;
 	else
 	{
-		while(num != 0)
+		while (num > 0)
 		{
-			dig++;
-			num /= 10;
+			temp = num % 10;
+			total += temp;
+            		num = num / 10;
 		}
 	}
 	
-	if(dig % 2 == 0)
-		return 1;
-	return 0;
+	if(total % 2 == 0)
+		return 0;
+	return 1;
 }
 
 int isprime(int n)
